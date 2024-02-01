@@ -1,0 +1,3 @@
+- `kompose convert -f dev/docker-compose.yml`
+- `kubectl apply -f`
+- `kubectl get pods`
