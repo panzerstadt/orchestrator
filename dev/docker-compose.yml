@@ -1,17 +1,23 @@
 version: "3"
 services:
   healthcheck:
+    container_name: healthcheck
+    image: go-healthcheck
     build: ../services/healthcheck
     depends_on:
       - wiki
       - dithering
   dithering:
+    container_name: dithering
+    image: js-dithering
     build: ../services/dithering
     depends_on:
       - wiki
     ports:
-      - 3000:3000
+      - 3001:3000
   wiki:
+    container_name: wiki
+    image: go-wiki
     build: ../services/wiki
     ports:
       - 8080:8080
