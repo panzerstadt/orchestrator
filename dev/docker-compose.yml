@@ -4,6 +4,7 @@ services:
     build: ../services/healthcheck
     depends_on:
       - wiki
+      - dithering
   dithering:
     build: ../services/dithering
     depends_on:
